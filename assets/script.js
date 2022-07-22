@@ -10,6 +10,9 @@ var button1 = document.querySelector("#btn-1")
 var button2 = document.querySelector("#btn-2")
 var button3 = document.querySelector("#btn-3")
 var button4 = document.querySelector("#btn-4")
+//var lastQuestionIndex = quizQ.length;//4 
+var currentQuestionIndex = 0
+var correct;
 //To display Quiz time 
 timer.textContent = quizTime 
 //Goals get timer to reduce by 20 and end at zero with each wrong question
@@ -24,7 +27,7 @@ function updateTimeWrongAnswer(){
  
     }
 //Event listener the record when the start button is clicked to execute the the start game function 
-document.addEventListener("click", startGame);
+startButton.addEventListener("click", startGame);
 
 function startGame() {
   console.log("Started");
@@ -32,13 +35,33 @@ function startGame() {
   startButton.classList.add("hide");
   introParagraph.classList.add("hide");
   questionContainerElement.classList.remove("hide");
+  questionEl.textContent = quizQ[currentQuestionIndex].question
+  button1.textContent = quizQ[currentQuestionIndex].choice1
+  button2.textContent = quizQ[currentQuestionIndex].choice2
+  button3.textContent = quizQ[currentQuestionIndex].choice3
+  button4.textContent = quizQ[currentQuestionIndex].choice4
+  
     
     //askQuestion()
   
-document.querySelector("#btn-3").addEventListener("click",updateTimeWrongAnswer);
+//document.querySelector("#btn-3").addEventListener("click",updateTimeWrongAnswer);
 
 }
+function nextQuestion(){ 
+  currentQuestionIndex++
+  questionEl.textContent = quizQ[currentQuestionIndex].question
+  button1.textContent = quizQ[currentQuestionIndex].choice1
+  button2.textContent = quizQ[currentQuestionIndex].choice2
+  button3.textContent = quizQ[currentQuestionIndex].choice3
+  button4.textContent = quizQ[currentQuestionIndex].choice4
+  console.log(currentQuestionIndex)
+};
 
+
+button1.addEventListener("click", nextQuestion)
+button2.addEventListener("click", nextQuestion)
+button3.addEventListener("click",nextQuestion)
+button4.addEventListener("click",nextQuestion)
 //Quiz questions 
 var quizQ = [
     { question:"2+2 = ?",
@@ -82,26 +105,24 @@ var quizQ = [
       },
 ];
 //the quizQ.length value  will be the total index of the quizQ array which will be an interger 
-var lastQuestionIndex = quizQ.length;
-var currentQuestionIndex = 0;
-var correct;
-//Setting function to display 1 of the 5 questions in the quizQ array, by using the index of the currentQuestinIndex variable and the lastQuestionIndex variable and setting them in an if statment 
-function askQuestion(){
-    if (currentQuestionIndex == lastQuestionIndex){
-        return false 
-    }
-    var currentQuestion = quizQ[currentQuestionIndex];
-    questionEl.innerHTML =
 
-}
+//Setting function to display 1 of the 5 questions in the quizQ array, by using the index of the currentQuestinIndex variable and the lastQuestionIndex variable and setting them in an if statment 
+//function askQuestion(){
+//if (currentQuestionIndex == lastQuestionIndex){
+   //     return false 
+   // }
+   // var currentQuestion = quizQ[currentQuestionIndex];
+   // questionEl.innerHTML =
+
+//}
     //choice1 = currentQuestion.choices[0]
 
     //answer = currentQuestion.answer
 
     //if (choice == sner)
- }
+ //}
 
- ...
+ //...
 
 
 //var quizQuestions = [
@@ -117,7 +138,7 @@ function askQuestion(){
 
     //},
     
-
+  //};
 
 
 function setNextQuestion() {
@@ -126,7 +147,8 @@ function setNextQuestion() {
 
 function selectAnswer(){
 
-}
+};
 
 
-//Set interval/Set Timeout research
+
+
