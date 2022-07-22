@@ -101,6 +101,8 @@ function askQuestion(){
     //if (choice == sner)
  }
 
+ ...
+
 
 //var quizQuestions = [
     //{
