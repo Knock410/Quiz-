@@ -47,7 +47,15 @@ function startGame() {
 //document.querySelector("#btn-3").addEventListener("click",updateTimeWrongAnswer);
 
 }
-function nextQuestion(){ 
+function nextQuestion(e){ 
+ //increases the index of the array by one 
+ if(e.target.innerText === quizQ[currentQuestionIndex].correctAnswer){
+  rightAnswer() 
+}
+
+else{
+  wrongAnswer()
+}
   currentQuestionIndex++
   questionEl.textContent = quizQ[currentQuestionIndex].question
   button1.textContent = quizQ[currentQuestionIndex].choice1
@@ -55,8 +63,21 @@ function nextQuestion(){
   button3.textContent = quizQ[currentQuestionIndex].choice3
   button4.textContent = quizQ[currentQuestionIndex].choice4
   console.log(currentQuestionIndex)
+  console.log(e.target.innerText)
+  
 };
 
+function rightAnswer(){
+  console.log("Player selected the right answer")
+  alert("CORRECT!")
+quizTime+=10;
+}
+
+function wrongAnswer(){
+  console.log("Player selected the wrong answer")
+  alert("WRONG!")
+quizTime-=10;
+}
 
 button1.addEventListener("click", nextQuestion)
 button2.addEventListener("click", nextQuestion)
@@ -69,7 +90,7 @@ var quizQ = [
       choice2:"1",
       choice3:"5",
       choice4:"4",
-      correctAnswer:"btn-4",
+      correctAnswer:"4",
     },
 
     { question:"What color is the sky?",
@@ -77,7 +98,7 @@ var quizQ = [
         choice2:"red",
         choice3:"green",
         choice4:"violet",
-        correctAnswer:"btn-1",
+        correctAnswer:"blue",
       },
 
       { question:"What can fly?",
@@ -85,7 +106,7 @@ var quizQ = [
         choice2:"Rat",
         choice3:"bird",
         choice4:"cat",
-        correctAnswer:"btn-3",
+        correctAnswer:"bird",
       },
 
       { question:"10-7=?",
@@ -93,7 +114,7 @@ var quizQ = [
         choice2:"2",
         choice3:"8",
         choice4:"5",
-        correctAnswer: "btn-1",
+        correctAnswer: "3",
       },
 
       { question:"What lives in water?",
@@ -101,7 +122,7 @@ var quizQ = [
         choice2:"fish",
         choice3:"nissan skyline",
         choice4:"fox",
-        correctAnswer:"btn-2",
+        correctAnswer:"fish",
       },
 ];
 //the quizQ.length value  will be the total index of the quizQ array which will be an interger 
