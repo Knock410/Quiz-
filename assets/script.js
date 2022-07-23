@@ -125,48 +125,48 @@ button4.addEventListener("click", nextQuestion);
 //Quiz questions
 var quizQ = [
   {
-    question: "2+2 = ?",
-    choice1: "3",
-    choice2: "1",
-    choice3: "5",
-    choice4: "4",
-    correctAnswer: "4",
+    question: "Which is JavaScript Data Type?",
+    choice1: "Encrypted",
+    choice2: "Corrupted",
+    choice3: "Bologna",
+    choice4: "Boolean",
+    correctAnswer: "Boolean",
   },
 
   {
-    question: "What color is the sky?",
-    choice1: "blue",
-    choice2: "red",
-    choice3: "green",
-    choice4: "violet",
-    correctAnswer: "blue",
-  },
-
-  {
-    question: "What can fly?",
-    choice1: "dog",
-    choice2: "Rat",
-    choice3: "bird",
-    choice4: "cat",
-    correctAnswer: "bird",
-  },
-
-  {
-    question: "10-7=?",
-    choice1: "3",
-    choice2: "2",
-    choice3: "8",
+    question: "In this array [Dog,Cat,Crow,Gecko] what is the index value of Crow ?",
+    choice1: "2",
+    choice2: "3",
+    choice3: "4",
     choice4: "5",
-    correctAnswer: "3",
+    correctAnswer: "2",
   },
 
   {
-    question: "What lives in water?",
-    choice1: "squirrel",
-    choice2: "fish",
-    choice3: "nissan skyline",
-    choice4: "fox",
-    correctAnswer: "fish",
+    question: "A JavaScript function should be enclosed in______?",
+    choice1: "[]",
+    choice2: "{}",
+    choice3: "<>",
+    choice4: "()",
+    correctAnswer: "{}",
+  },
+
+  {
+    question: "Which is NOT a method to target HTML elements?",
+    choice1: ".querySelector",
+    choice2: ".getElementById",
+    choice3: ".targetHTMLElement",
+    choice4: ".getElementsByClassName",
+    correctAnswer: ".targetHTMLElement",
+  },
+
+  {
+    question: "Which statment jump out of a loop?",
+    choice1: "stop",
+    choice2: "break",
+    choice3: "return",
+    choice4: "pleaseStop",
+    correctAnswer: "break",
   },
 ];
 //the quizQ.length value  will be the total index of the quizQ array which will be an interger
