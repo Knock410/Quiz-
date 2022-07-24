@@ -75,3 +75,12 @@ body {
 .hide {
     display:none;
 }
+
+.input {
+    border-radius: 25px;
+    border: 2px solid #000000;
+    padding: 10px;
+    font-size:larger;
+    font-weight: bold;
+}
+
