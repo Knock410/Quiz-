@@ -47,7 +47,7 @@ function saveScore() {
   score: quizTime
  })
  localStorage.setItem("quiz-score", JSON.stringify(scores))
- // save it to localstorage
+ // saves it to localstorage
 }
 
 function startGame() {
@@ -169,36 +169,5 @@ var quizQ = [
     correctAnswer: "break",
   },
 ];
-//the quizQ.length value  will be the total index of the quizQ array which will be an interger
 
-//Setting function to display 1 of the 5 questions in the quizQ array, by using the index of the currentQuestinIndex variable and the lastQuestionIndex variable and setting them in an if statment
-//function askQuestion(){
-//if (currentQuestionIndex == lastQuestionIndex){
-//     return false
-// }
-// var currentQuestion = quizQ[currentQuestionIndex];
-// questionEl.innerHTML =
 
-//}
-//choice1 = currentQuestion.choices[0]
-
-//answer = currentQuestion.answer
-
-//if (choice == sner)
-//}
-
-//...
-
-//var quizQuestions = [
-//{
-// question: 'What is Hyper Text Mark Up Language?',
-//answers: [
-//{ text: "HTML", correct:true}
-//{ text: "JavaScript", correct:false}
-//{ text: "PS2", correct:false}
-//{ text: "CSS", correct:false}
-//],
-
-//},
-
-//};

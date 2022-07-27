@@ -9,11 +9,12 @@
 
 </head>
 <body>
-    <!--Created a div to contain the questions and btn with assigned classes and ids-->
+    <!--Created a div to contain the questions and btn with assigned classes and ids to be targeted in JS and styled in CSS -->
    <div class="container">
     
     <div id="question-container" class="hide">
         <div id="question">Question</div>
+        <!--Buttons are the choices for the quiz -->
         <div id="answer-buttons" class="btn-grid">
             <button id="btn-1" class="btn"></button>
             <button id="btn-2" class="btn"></button>
@@ -23,6 +24,7 @@
         <p id ="result"> </p>
         <div id="timer"></div>
     </div>
+    <!--Div that adds paragraph text at the start of the quiz and gives class and id to start button -->
         <div class="controls">
             <p class= "intro " id="intro-quiz"> This is a quiz that will test your understanding of JavaScript. This will be a timed quized and with each question answered incorrectly the time will reduced and you can enter your name at the end to save your score. Good Luck!</p>
             <button id="start-btn" class="start-btn btn">Start</button>
