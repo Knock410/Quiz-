@@ -122,7 +122,7 @@ button1.addEventListener("click", nextQuestion);
 button2.addEventListener("click", nextQuestion);
 button3.addEventListener("click", nextQuestion);
 button4.addEventListener("click", nextQuestion);
-//Quiz questions
+//Quiz questions array 
 var quizQ = [
   {
     question: "Which is JavaScript Data Type?",
